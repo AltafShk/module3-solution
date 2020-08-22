@@ -110,7 +110,22 @@
                 'Content-Type': 'application/json',
                 'Accept': 'application/json',
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify({
+            "Registration" : {
+             "Currency": "AED",
+             "ReturnPath": "https://localhost:3000/home",
+             "TransactionHint": "CPT:Y;VCC:Y;",
+             "OrderID": "7210055701315195",
+             "Store": "0000",
+             "Terminal": "0000",
+             "Channel": "Web",
+             "Amount": "2.00",
+             "Customer": "Demo Merchant",
+             "OrderName": "Paybill",
+             "UserName":"Demo_fY9c",
+             "Password":"Comtrust@20182018"
+             }
+            })
           })
         .then((res) => {
             console.log(res)
